@@ -7,7 +7,7 @@ const getUserdata1 = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await res.json();
   const newLi = document.createElement("li");
-  newLi.innerText = data[i].name;
+  newLi.innerText = `User No.${i + 1} : ${data[i].name}`;
   userList.appendChild(newLi);
 };
 
